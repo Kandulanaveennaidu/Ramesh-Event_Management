@@ -4,6 +4,7 @@ import {
     Shield, Clock, Leaf, Star
 } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
+import profileImg from '../assets/profile.png';
 
 const About = () => {
     const values = [
@@ -136,8 +137,8 @@ const About = () => {
                                             <Leaf className="w-8 h-8 text-primary-500" />
                                         </div>
                                         <div>
-                                            <p className="text-3xl font-bold gradient-text">10+</p>
-                                            <p className="text-dark-400 text-sm">Years of Excellence</p>
+                                            <p className="text-3xl font-bold gradient-text">1+</p>
+                                            <p className="text-dark-400 text-sm">Year of Excellence</p>
                                         </div>
                                     </div>
                                 </motion.div>
@@ -309,9 +310,11 @@ const About = () => {
                             <div className="inline-block mb-8">
                                 <div className="relative">
                                     <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary-600 to-gold-400 p-1">
-                                        <div className="w-full h-full rounded-full bg-dark-900 flex items-center justify-center">
-                                            <span className="text-4xl font-display font-bold gradient-text">J</span>
-                                        </div>
+                                        <img
+                                            src={profileImg}
+                                            alt="Jagadeesh - Founder & CEO"
+                                            className="w-full h-full rounded-full object-cover"
+                                        />
                                     </div>
                                     <motion.div
                                         className="absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center"

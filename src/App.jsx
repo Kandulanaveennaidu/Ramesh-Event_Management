@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import ServiceDetail from './pages/ServiceDetail';
 import Locations from './pages/Locations';
 import Contact from './pages/Contact';
+import ComingSoonBanner from './components/ui/ComingSoonBanner';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -24,6 +25,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <ComingSoonBanner />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -39,3 +41,5 @@ function App() {
 }
 
 export default App;
+
+

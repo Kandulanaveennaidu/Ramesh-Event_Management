@@ -234,7 +234,7 @@ const Home = () => {
 
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                         <StatCounter value="500" suffix="+" label="Events Completed" icon={Calendar} />
-                        <StatCounter value="10" suffix="+" label="Years Experience" icon={Award} />
+                        <StatCounter value="1" suffix="+" label="Years Experience" icon={Award} />
                         <StatCounter value="4" suffix="" label="States Covered" icon={Users} />
                         <StatCounter value="100" suffix="%" label="Client Satisfaction" icon={Star} />
                     </div>
