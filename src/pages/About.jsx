@@ -4,7 +4,7 @@ import {
     Shield, Clock, Leaf, Star
 } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
-import profileImg from '../assets/profile.png';
+import profileImg from '../assets/profile.jpg';
 
 const About = () => {
     const values = [
