@@ -5,20 +5,20 @@ import {
 } from 'lucide-react';
 
 // Import Gallery Images for Engagement
-import engagement1 from '../assets/ramEvents/DSC04602.JPG';
-import engagement2 from '../assets/ramEvents/DSC04605.JPG';
-import engagement3 from '../assets/ramEvents/DSC04609.JPG';
-import engagement4 from '../assets/ramEvents/DSC04641.JPG';
-import engagement5 from '../assets/ramEvents/DSC04644.JPG';
-import engagement6 from '../assets/ramEvents/DSC04657.JPG';
-import engagement7 from '../assets/ramEvents/RLV09354.JPG';
-import engagement8 from '../assets/ramEvents/RLV09653.JPG';
-import engagement9 from '../assets/ramEvents/RLV09657.JPG';
-import engagement10 from '../assets/ramEvents/RLV09660.JPG';
-import engagement11 from '../assets/ramEvents/RLV09664.JPG';
-import engagement12 from '../assets/ramEvents/RLV09670.JPG';
-import engagement13 from '../assets/ramEvents/RLV09675.JPG';
-import engagement14 from '../assets/ramEvents/RLV09677.JPG';
+import engagement1 from '../assets/ramEventsOptimized/DSC04602.JPG';
+import engagement2 from '../assets/ramEventsOptimized/DSC04605.JPG';
+import engagement3 from '../assets/ramEventsOptimized/DSC04609.JPG';
+import engagement4 from '../assets/ramEventsOptimized/DSC04641.JPG';
+import engagement5 from '../assets/ramEventsOptimized/DSC04644.JPG';
+import engagement6 from '../assets/ramEventsOptimized/DSC04657.JPG';
+import engagement7 from '../assets/ramEventsOptimized/RLV09354.JPG';
+import engagement8 from '../assets/ramEventsOptimized/RLV09653.JPG';
+import engagement9 from '../assets/ramEventsOptimized/RLV09657.JPG';
+import engagement10 from '../assets/ramEventsOptimized/RLV09660.JPG';
+import engagement11 from '../assets/ramEventsOptimized/RLV09664.JPG';
+import engagement12 from '../assets/ramEventsOptimized/RLV09670.JPG';
+import engagement13 from '../assets/ramEventsOptimized/RLV09675.JPG';
+import engagement14 from '../assets/ramEventsOptimized/RLV09677.JPG';
 
 export const services = [
     {
