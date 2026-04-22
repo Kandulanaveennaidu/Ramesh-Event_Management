@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import {
     Phone, Mail, MapPin, Clock, Send,
     MessageCircle, User, Calendar, FileText,
-    CheckCircle2
+    CheckCircle2, ArrowRight
 } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
 
@@ -331,47 +331,53 @@ const Contact = () => {
             <section className="py-24 bg-gradient-to-b from-dark-950 to-dark-900">
                 <div className="container mx-auto px-6">
                     <AnimatedSection className="text-center mb-12">
-                        <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-4">
+                        <span className="inline-block px-4 py-1 rounded-full bg-primary-600/10 text-primary-500 text-sm font-medium mb-4">
+                            Locate Us
+                        </span>
+                        <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
                             Visit Our Office
                         </h2>
-                        <p className="text-dark-400">
+                        <p className="text-dark-300">
                             Located in the heart of Hyderabad
                         </p>
                     </AnimatedSection>
 
                     <AnimatedSection>
-                        {/* Map placeholder */}
-                        <div className="relative rounded-2xl overflow-hidden aspect-[16/7] bg-dark-900 border border-dark-800">
-                            <div className="absolute inset-0 bg-gradient-to-br from-dark-900 to-dark-950">
-                                {/* Stylized map placeholder */}
-                                <div className="absolute inset-0 opacity-20">
-                                    <div className="grid grid-cols-12 gap-1 h-full p-4">
-                                        {[...Array(48)].map((_, i) => (
-                                            <div
-                                                key={i}
-                                                className="bg-dark-700 rounded"
-                                                style={{ opacity: Math.random() * 0.5 + 0.2 }}
-                                            ></div>
-                                        ))}
+                        <div className="relative rounded-3xl overflow-hidden aspect-[16/8] border border-dark-800 shadow-2xl shadow-primary-600/5 bg-dark-900">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2736209351056!2d78.4344583!3d17.4069333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb973e8e8e8e8e%3A0x8e8e8e8e8e8e8e8e!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1713800000000!5m2!1sen!2sin"
+                                width="100%" 
+                                height="100%" 
+                                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%)' }} 
+                                allowFullScreen="" 
+                                loading="lazy" 
+                                referrerPolicy="no-referrer-when-downgrade"
+                                className="grayscale-[0.2]"
+                            ></iframe>
+                            
+                            {/* Map Overlay Card */}
+                            <div className="absolute bottom-8 right-8 hidden md:block">
+                                <div className="card-glass p-6 max-w-xs border-primary-600/20">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center text-white">
+                                            <MapPin className="w-6 h-6" />
+                                        </div>
+                                        <div>
+                                            <h4 className="text-white font-bold">Hyderabad Office</h4>
+                                            <p className="text-primary-500 text-xs font-medium">Headquarters</p>
+                                        </div>
                                     </div>
-                                </div>
-
-                                {/* Center marker */}
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <motion.div
-                                        animate={{ y: [0, -10, 0] }}
-                                        transition={{ duration: 2, repeat: Infinity }}
-                                        className="relative"
+                                    <p className="text-dark-300 text-sm leading-relaxed mb-4">
+                                        Plan your dream event with us. Visit our corporate office for a free consultation.
+                                    </p>
+                                    <a 
+                                        href="https://maps.google.com/?q=Hyderabad,Telangana" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="text-white text-xs font-bold hover:text-primary-500 transition-colors flex items-center gap-2"
                                     >
-                                        <div className="w-16 h-16 rounded-full bg-primary-600/20 flex items-center justify-center">
-                                            <div className="w-10 h-10 rounded-full bg-primary-600/40 flex items-center justify-center">
-                                                <MapPin className="w-6 h-6 text-primary-500" />
-                                            </div>
-                                        </div>
-                                        <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap">
-                                            <p className="text-white font-medium">Hyderabad, Telangana</p>
-                                        </div>
-                                    </motion.div>
+                                        GET DIRECTIONS <ArrowRight className="w-3 h-3" />
+                                    </a>
                                 </div>
                             </div>
                         </div>

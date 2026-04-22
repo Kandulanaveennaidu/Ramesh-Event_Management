@@ -82,56 +82,74 @@ const Locations = () => {
             {/* Map Section */}
             <section className="py-24 bg-gradient-to-b from-dark-950 to-dark-900">
                 <div className="container mx-auto px-6">
-                    <AnimatedSection className="text-center mb-12">
-                        <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-4">
+                    <AnimatedSection className="text-center mb-16">
+                        <span className="inline-block px-4 py-1 rounded-full bg-primary-600/10 text-primary-500 text-sm font-medium mb-4">
+                            Real-time Location
+                        </span>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
                             Our Presence Across India
                         </h2>
-                        <p className="text-dark-400">
-                            Headquartered in Hyderabad, serving clients in 4 states
+                        <p className="text-dark-300 text-lg">
+                            Headquartered in <span className="text-primary-500 font-bold">Hyderabad</span>, serving clients in 4 major states
                         </p>
                     </AnimatedSection>
 
-                    <AnimatedSection>
-                        {/* Map placeholder */}
-                        <div className="relative rounded-2xl overflow-hidden aspect-[16/9] bg-dark-900 border border-dark-800">
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="text-center">
-                                    <div className="relative inline-block mb-6">
-                                        {/* India map outline placeholder */}
-                                        <svg
-                                            viewBox="0 0 400 400"
-                                            className="w-64 h-64 text-dark-700"
-                                            fill="currentColor"
-                                        >
-                                            <path d="M200 50 L270 80 L300 150 L320 200 L310 260 L280 300 L240 340 L200 360 L160 340 L120 300 L90 260 L80 200 L100 150 L130 80 Z"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                strokeWidth="2"
-                                                className="text-dark-700"
-                                            />
-                                            {/* Location markers */}
-                                            <circle cx="200" cy="220" r="8" className="text-primary-500 fill-current animate-pulse" /> {/* Hyderabad */}
-                                            <circle cx="190" cy="260" r="6" className="text-primary-500/70 fill-current" /> {/* AP */}
-                                            <circle cx="140" cy="200" r="6" className="text-primary-500/70 fill-current" /> {/* Goa */}
-                                            <circle cx="160" cy="140" r="6" className="text-primary-500/70 fill-current" /> {/* Rajasthan */}
-                                        </svg>
+                    <div className="grid lg:grid-cols-3 gap-8 items-start">
+                        {/* Map Container */}
+                        <AnimatedSection className="lg:col-span-2 rounded-3xl overflow-hidden border border-dark-800 shadow-2xl shadow-primary-600/5 aspect-video lg:aspect-auto lg:h-[600px]">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2736209351056!2d78.4344583!3d17.4069333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb973e8e8e8e8e%3A0x8e8e8e8e8e8e8e8e!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1713800000000!5m2!1sen!2sin"
+                                width="100%" 
+                                height="100%" 
+                                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%)' }} 
+                                allowFullScreen="" 
+                                loading="lazy" 
+                                referrerPolicy="no-referrer-when-downgrade"
+                                className="opacity-80 grayscale-[0.2]"
+                            ></iframe>
+                        </AnimatedSection>
 
-                                        {/* Glow effect */}
-                                        <div className="absolute inset-0 bg-primary-600/10 rounded-full blur-3xl"></div>
-                                    </div>
-
-                                    <div className="flex flex-wrap justify-center gap-6">
-                                        {locations.map((loc) => (
-                                            <div key={loc.name} className="flex items-center gap-2">
-                                                <span className={`w-3 h-3 rounded-full ${loc.isHeadquarters ? 'bg-primary-500 animate-pulse' : 'bg-primary-500/70'}`}></span>
-                                                <span className="text-dark-300 text-sm">{loc.name}</span>
-                                            </div>
-                                        ))}
+                        {/* Location Details */}
+                        <div className="space-y-6">
+                            <AnimatedSection delay={0.2} className="card-glass p-8 border-primary-600/20">
+                                <h3 className="text-xl font-display font-bold text-white mb-4 flex items-center gap-2">
+                                    <span className="w-2 h-2 rounded-full bg-primary-500 animate-pulse"></span>
+                                    Corporate Headquarters
+                                </h3>
+                                <p className="text-dark-300 mb-6">
+                                    Our central operations hub managing all events across India.
+                                </p>
+                                <div className="space-y-4">
+                                    <div className="flex items-start gap-4 p-4 rounded-xl bg-dark-800/50 border border-dark-700">
+                                        <div className="w-10 h-10 rounded-lg bg-primary-600/20 flex items-center justify-center text-primary-500 shrink-0">
+                                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                        </div>
+                                        <div>
+                                            <p className="text-white font-medium">Hyderabad, Telangana</p>
+                                            <p className="text-dark-400 text-sm">Corporate Office</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </AnimatedSection>
+
+                            <AnimatedSection delay={0.3} className="card-glass p-8">
+                                <h3 className="text-xl font-display font-bold text-white mb-6">Service Reach</h3>
+                                <div className="grid grid-cols-2 gap-4">
+                                    {locations.map((loc) => (
+                                        <div key={loc.name} className="flex items-center gap-3 p-3 rounded-xl bg-dark-800/30 border border-dark-800">
+                                            <div className="w-2 h-2 rounded-full bg-primary-500"></div>
+                                            <span className="text-dark-300 text-sm font-medium">{loc.name}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="mt-8 pt-8 border-t border-dark-800">
+                                    <p className="text-dark-400 text-sm italic">
+                                        * Also providing specialized services for destination weddings across all major Indian heritage cities.
+                                    </p>
+                                </div>
+                            </AnimatedSection>
                         </div>
-                    </AnimatedSection>
+                    </div>
                 </div>
             </section>
 
