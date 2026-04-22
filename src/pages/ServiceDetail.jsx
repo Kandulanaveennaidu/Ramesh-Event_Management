@@ -5,6 +5,7 @@ import {
     MessageCircle, Calendar, Star
 } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
+import LazyImage from '../components/ui/LazyImage';
 import { getServiceBySlug, services } from '../data/services';
 
 const ServiceDetail = () => {
@@ -250,6 +251,51 @@ const ServiceDetail = () => {
                     </AnimatedSection>
                 </div>
             </section>
+
+            {/* Gallery Section */}
+            {service.gallery && service.gallery.length > 0 && (
+                <section className="py-24 bg-dark-950">
+                    <div className="container mx-auto px-6">
+                        <AnimatedSection className="text-center mb-16">
+                            <span className="inline-block px-4 py-1 rounded-full bg-primary-600/10 text-primary-500 text-sm font-medium mb-4">
+                                Event Gallery
+                            </span>
+                            <h2 className="section-title mb-4">Captured Moments</h2>
+                            <p className="section-subtitle">
+                                A glimpse into the beautiful memories we've helped create
+                            </p>
+                        </AnimatedSection>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {service.gallery.map((img, index) => (
+                                <AnimatedSection
+                                    key={index}
+                                    delay={index * 0.05}
+                                    className="aspect-square group overflow-hidden rounded-2xl border border-dark-800"
+                                >
+                                    <motion.div
+                                        className="relative w-full h-full cursor-pointer"
+                                        whileHover={{ scale: 1.05 }}
+                                        transition={{ duration: 0.6 }}
+                                    >
+                                        <LazyImage
+                                            src={img}
+                                            alt={`${service.name} gallery ${index + 1}`}
+                                            className="w-full h-full"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                            <div className="text-white">
+                                                <p className="font-medium text-lg">{service.name}</p>
+                                                <p className="text-primary-400 text-sm">Professional Management</p>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                </AnimatedSection>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
 
             {/* Related Services */}
             <section className="py-24 bg-gradient-to-b from-dark-900 to-dark-950">

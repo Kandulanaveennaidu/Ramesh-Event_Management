@@ -4,6 +4,22 @@ import {
     Handshake, Gift, Crown
 } from 'lucide-react';
 
+// Import Gallery Images for Engagement
+import engagement1 from '../assets/ramEvents/DSC04602.JPG';
+import engagement2 from '../assets/ramEvents/DSC04605.JPG';
+import engagement3 from '../assets/ramEvents/DSC04609.JPG';
+import engagement4 from '../assets/ramEvents/DSC04641.JPG';
+import engagement5 from '../assets/ramEvents/DSC04644.JPG';
+import engagement6 from '../assets/ramEvents/DSC04657.JPG';
+import engagement7 from '../assets/ramEvents/RLV09354.JPG';
+import engagement8 from '../assets/ramEvents/RLV09653.JPG';
+import engagement9 from '../assets/ramEvents/RLV09657.JPG';
+import engagement10 from '../assets/ramEvents/RLV09660.JPG';
+import engagement11 from '../assets/ramEvents/RLV09664.JPG';
+import engagement12 from '../assets/ramEvents/RLV09670.JPG';
+import engagement13 from '../assets/ramEvents/RLV09675.JPG';
+import engagement14 from '../assets/ramEvents/RLV09677.JPG';
+
 export const services = [
     {
         slug: 'birthday',
@@ -123,7 +139,13 @@ export const services = [
             'Music & DJ',
             'Guest management',
         ],
-        image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800',
+        image: engagement1,
+        gallery: [
+            engagement1, engagement2, engagement3, engagement4,
+            engagement5, engagement6, engagement7, engagement8,
+            engagement9, engagement10, engagement11, engagement12,
+            engagement13, engagement14
+        ]
     },
     {
         slug: 'haldi-ceremony',
@@ -171,7 +193,11 @@ export const services = [
             'Entertainment',
             'Guest coordination',
         ],
-        image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800',
+        image: engagement6,
+        gallery: [
+            engagement1, engagement2, engagement3, engagement4,
+            engagement5, engagement6
+        ]
     },
     {
         slug: 'reception',
@@ -195,7 +221,11 @@ export const services = [
             'Professional hosting',
             'Photography & video',
         ],
-        image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800',
+        image: engagement11,
+        gallery: [
+            engagement7, engagement8, engagement9, engagement10,
+            engagement11, engagement12
+        ]
     },
     {
         slug: 'anniversary',
